@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "new-projcet"
+  "defaultProject": "new-projcet",
+  "cli": {
+    "analytics": false
+  }
 }
