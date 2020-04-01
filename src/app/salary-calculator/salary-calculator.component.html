@@ -1,0 +1,27 @@
+<div [formGroup]="form" class="salary-calculator-padding">
+  <mat-tab-group>
+    <mat-tab label="Desired salary">
+      <div *ngIf="!hideDesiredSalary">
+        <mat-form-field class="full-width">
+          <mat-label>Desired Salary by employee</mat-label>
+          <input type="number" matInput formControlName="minimum_salary">
+        </mat-form-field>
+        <br>
+        <button (click)="onSubmit()" class="full-width" mat-raised-button color="primary">Submit</button>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Maximum salary">
+      <div *ngIf="!hideMaximumSalary">
+        <mat-form-field class="full-width">
+          <mat-label>Offered salary by employer</mat-label>
+          <input type="number" matInput formControlName="maximum_salary">
+        </mat-form-field>
+        <br>
+        <button (click)="onSubmit()" class="full-width" mat-raised-button color="primary">Submit</button>
+      </div>
+
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
